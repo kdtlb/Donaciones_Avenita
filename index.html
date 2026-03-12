@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones por el bien de la Avenita</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge">Transparencia pública</span>
+        <h1>Donaciones por el bien de la Avenita</h1>
+        <p id="campaignDescription">Cargando información...</p>
+      </div>
+
+      <div class="hero-card">
+        <p class="mini-label">Resumen general</p>
+        <div class="hero-stats">
+          <div>
+            <span>Total recaudado</span>
+            <strong id="raisedAmount">$0</strong>
+          </div>
+          <div>
+            <span>Número de donaciones</span>
+            <strong id="donationsCount">0</strong>
+          </div>
+          <div>
+            <span>Total invertido</span>
+            <strong id="investedAmount">$0</strong>
+          </div>
+          <div>
+            <span>Saldo disponible</span>
+            <strong id="availableAmount">$0</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="kpi-grid">
+      <article class="kpi-card">
+        <p>Total recaudado</p>
+        <h3 id="kpiRaised">$0</h3>
+      </article>
+
+      <article class="kpi-card">
+        <p>Número de donaciones</p>
+        <h3 id="kpiDonations">0</h3>
+      </article>
+
+      <article class="kpi-card">
+        <p>Total invertido</p>
+        <h3 id="kpiInvested">$0</h3>
+      </article>
+
+      <article class="kpi-card">
+        <p>Saldo disponible</p>
+        <h3 id="kpiAvailable">$0</h3>
+      </article>
+    </section>
+
+    <section class="charts-grid">
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Recaudado vs invertido</h2>
+          <p>Comparación general de ingresos y uso de fondos</p>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="comparisonChart"></canvas>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Distribución del dinero invertido</h2>
+          <p>Resumen por categoría</p>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="expensesChart"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>¿En qué se está invirtiendo el dinero?</h2>
+        <p>Detalle del uso de los fondos</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Monto</th>
+              <th>Porcentaje</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody id="expensesTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Actualizaciones</h2>
+        <p>Últimos movimientos de la campaña</p>
+      </div>
+      <div id="updatesList" class="updates-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Echo por Matias Lopez Bertram</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

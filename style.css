@@ -1,0 +1,297 @@
+:root {
+  --bg: #fff7fb;
+  --surface: #ffffff;
+  --surface-soft: #fff0f6;
+  --text: #4a2340;
+  --muted: #8a6278;
+  --primary: #e754a6;
+  --primary-dark: #cc3e8f;
+  --secondary: #f8b4d9;
+  --border: #f3d3e4;
+  --shadow: 0 12px 30px rgba(190, 80, 140, 0.12);
+  --radius: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #ffeef7 0%, var(--bg) 320px);
+  color: var(--text);
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 42px 0 26px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+}
+
+.hero-text,
+.hero-card,
+.kpi-card,
+.panel {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.hero-text {
+  border-radius: 28px;
+  padding: 34px;
+}
+
+.badge {
+  display: inline-block;
+  background: #ffe1f0;
+  color: var(--primary-dark);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-text h1 {
+  margin: 0 0 14px;
+  font-size: 44px;
+  line-height: 1.05;
+}
+
+.hero-text p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.hero-card {
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.mini-label {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.hero-stats div {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.hero-stats span {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.hero-stats strong {
+  font-size: 26px;
+  color: var(--primary-dark);
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 8px 0 24px;
+}
+
+.kpi-card {
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.kpi-card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.kpi-card h3 {
+  margin: 0;
+  font-size: 30px;
+  color: var(--primary-dark);
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.panel-header {
+  margin-bottom: 18px;
+}
+
+.panel-header h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.panel-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.chart-wrap {
+  position: relative;
+  height: 360px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+thead th {
+  text-align: left;
+  background: #ffe8f3;
+  color: #9b2d6c;
+  padding: 14px;
+  font-size: 14px;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background: #fff8fc;
+}
+
+.category-pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #ffe1f0;
+  color: #a52d71;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.updates-list {
+  display: grid;
+  gap: 14px;
+}
+
+.update-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.update-date {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.update-card p {
+  margin: 0;
+  color: #6f4760;
+  line-height: 1.65;
+}
+
+.footer {
+  padding: 8px 0 36px;
+}
+
+.footer-content {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-content,
+  .kpi-grid,
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .hero-text,
+  .hero-card,
+  .kpi-card,
+  .panel {
+    border-radius: 18px;
+  }
+
+  .hero-text {
+    padding: 24px;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .chart-wrap {
+    position: relative;
+    height: 280px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
